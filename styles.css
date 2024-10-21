@@ -296,12 +296,10 @@ section {
     height: auto;
     display: block;
     object-fit: cover;
-	transition: display 0.5s ease;
 }
 
 .grid-item .hoverimg {
 	display: none;
-	transition: display 0.5s ease;
 }
 
 .grid-item h2 {
