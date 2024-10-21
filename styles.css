@@ -1,0 +1,508 @@
+/* Google Font: Urbanist */
+body {
+    font-family: 'Urbanist', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    z-index: 1000;
+    width: 100%;
+}
+
+.navbar {
+    min-width: 750px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f7f7f7;
+    height: 20px; /* Set a fixed height */
+}
+
+.logo {
+    font-size: 1.3rem;   
+    font-weight: 700;  
+    letter-spacing: 0.05rem; 
+    color: rgb(15, 15, 15);
+    text-transform: lowercase; 
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: rgb(15, 15, 15);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a.active {
+    font-weight: bold;           /* Makes the active link bold */
+    pointer-events: none;       /* Prevents hover effects */
+    color: #996211;             /* Change color if desired */
+}
+
+.nav-list li a:hover {
+    color: #996211;
+}
+
+section {
+    padding: 100px 20px;
+    text-align: left;  /* Align text to the left */
+}
+
+#project1 {
+    padding: 50px 20px;
+    text-align: left;  /* Align text to the left */
+}
+
+.project-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px; /* Space between header and details */
+    max-width: 950px;
+    margin: auto;
+}
+
+.project-header h1{
+    font-size: 3.2rem;
+}
+
+.project-image {
+    background-color: #ccc; /* Placeholder color */
+    width: fit-content;     /* Full width */
+    height: auto;          /* Set height to auto for flexibility */
+    max-width: 950px;
+    border-radius: 20px;   /* Rounded corners */
+    padding: 0;
+    overflow: hidden;       /* Ensures no overflow */
+}
+
+.project-image img {
+    width: 100%;            /* Ensures the image fills the container */
+    height: auto;          /* Keeps the aspect ratio */
+    border-radius: 20px;   /* Rounded corners */
+    display: block;       /* Ensures the image is a block element */
+    object-fit: cover;      /* Ensures the image covers the area */
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between sections */
+    max-width: 950px;
+    margin: auto;
+}
+
+.project-info {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 30px; /* Space between items */
+    max-width: 950px;
+    margin-top: 20px;
+}
+
+.project-info div {
+    flex: 1; /* Flex-grow for equal width */
+    width: 200px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 31%);
+}
+
+.tasks ul{
+    list-style-type: none;
+    padding: 0;             /* Removes default padding */
+    margin: 0;              /* Removes default margin */
+}
+
+.tools ul{
+    list-style-type: none;
+    padding: 0;             /* Removes default padding */
+    margin: 0;              /* Removes default margin */
+}
+
+.project-info strong {
+    font-weight: 700; /* Bold for titles */
+}
+
+.case-study {
+    display: flex;
+    min-width: 500px;
+    max-width: 950px;          /* Set your desired maximum width */
+    background-color: #f0f0f0;  /* Light gray background */
+    border-radius: 10px;        /* Rounded corners */
+    margin: 20px auto;             /* Spacing between case studies */
+    text-decoration: none;             /* Remove default anchor styles */
+    transition: transform 0.3s;       /* Smooth transition for hover effect */
+    padding: 20px;              /* Padding inside the case study */
+}
+
+.case-study:hover {
+    transform: scale(1.02);           /* Slightly enlarge on hover */
+}
+
+.case-study-info {
+    flex: 1;                    /* Takes up the remaining space */
+    padding: 20px;             /* Padding around text */
+}
+
+.case-study-image {
+    background-color: #ccc;    /* Grey rectangle for placeholder */
+    flex: 0 0 200px;           /* Fixed width for image section */
+    height: 150px;             /* Set height for image */
+    border-radius: 10px;       /* Rounded corners */
+    margin-right: 20px;        /* Spacing between image and text */
+}
+
+.case-study h2 {
+    font-size: 1.5rem;         /* Size for the title */
+    margin: 10px 0;           /* Spacing around the title */
+    text-decoration: none;
+    color: #000;
+}
+
+.case-study p {
+    color: #444;               /* Darker text for description */
+    
+    line-height: 1.6;          /* Increase line spacing for readability */
+}
+
+/* Section Colors (If needed) */
+#ux-cases {
+    background-color: #fff;    /* White background for case studies */
+}
+
+/* Style for the tags container */
+.tags-container {
+    display: flex;               /* Align tags in a row */
+    flex-wrap: wrap;            /* Wrap tags to next line if needed */
+    gap: 5px;                   /* Space between tags */
+    margin-top: 10px;           /* Space above tags */
+}
+
+/* Individual tag styles */
+.tag {
+    display: inline-block;          /* Makes the element inline with padding */
+    background-color: #000;        /* Default black background */
+    color: #fff;                   /* White text */
+    padding: 5px 10px;             /* Padding around the text */
+    border-radius: 15px;           /* Rounded corners */
+    font-size: 12px;               /* Font size for tags */
+    font-weight: 500;              /* Medium weight for better visibility */
+}
+.tag-cloud-wrapper {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    margin-top: 30px;
+  
+}
+
+.tag-cloud {
+    display: flex;
+    flex-direction: column;   /* Aligns the tags vertically */
+    gap: 20px;                /* Space between tags */
+    align-items: center;      /* Center the tags horizontally */
+}
+
+/* Change tag colors for specific tags */
+.tag:nth-child(1) {
+    background-color: #690627; /* Blue for first tag */
+}
+
+.tag:nth-child(2) {
+    background-color: #b10058; /* Green for second tag */
+}
+
+.tag:nth-child(3) {
+    background-color: #996211; /* Orange for third tag */
+}
+
+.tag:nth-child(4) {
+    background-color: #996211; /* Brown for fourth tag */
+}
+
+.tagblack {
+    display: flex; 
+    justify-content: center; 
+    width: fit-content;        /* Makes the element inline with padding */
+    background-color: #000;        /* Default black background */
+    color: #fff;                   /* White text */
+    padding: 8px 14px;             /* Padding around the text */
+    border-radius: 15px;           /* Rounded corners */
+    font-size: 14px;               /* Font size for tags */
+    font-weight: 500;              /* Medium weight for better visibility */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+@media (max-width: 600px) { /* Media query for phones */
+    .grid-container {
+        max-width: 100%; /* Use full width on phones */
+        padding: 0 10px; /* Optional: add some padding for better spacing */
+    }
+}
+
+/* Tile Styles */
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px; /* Rounded corners */
+    transition: transform 0.3s;
+    background-color: transparent; /* Placeholder background */
+    
+    
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0px; /* Match the border-radius of the tile */
+    object-fit: cover;
+}
+
+.grid-item h2 {
+    font-size: 1.5rem;            /* Size for the title */
+    margin: 10;                    /* Remove default margins */
+    color: #000;                  /* Title color */
+}
+
+
+.grid-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    
+}
+
+.grid-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay .text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.grid-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+/* Classes for different sizes of items */
+.grid-item.large {
+    grid-column: span 2; /* Span 2 columns */
+    grid-row: span 2;    /* Span 2 rows */
+}
+
+.grid-item.medium-vertical {
+    grid-column: span 1; /* Span 1 column */
+    grid-row: span 2;    /* Span 2 row */
+}
+
+.grid-item.medium-horizontal {
+    grid-column: span 2; /* Span 1 column */
+    grid-row: span 1;    /* Span 2 row */
+}
+
+
+.grid-item.small {
+    grid-column: span 1; /* Span 1 column */
+    grid-row: span 1;    /* Span 1 row */
+}
+/* Container centered vertically and horizontally */
+#intro-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the block */
+    /* align-items: center; Vertically center the block */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+}
+
+/* Text block */
+#typing-text {
+    font-size: 6rem; /* Adjust text size */
+    max-width: 900px; /* Constrain the block width */
+    width: 100%; /* Make it responsive */
+    line-height: 1.5; /* Space between lines */
+    text-align: left; /* Text starts from the left */
+    white-space: pre-wrap; /* Ensure text wraps to the next line */
+}
+
+@media (max-width: 600px) {
+    #typing-text {
+        font-size: 11vw; /* Increase font size for small screens */
+        padding: 10px; /* Add padding for better spacing */
+        width: 100%; 
+    }
+}
+
+/* For the highlighted last word "sensible" */
+.highlight-sensible {
+    color: #ff8c00;
+}
+
+.highlight-creative {
+    color: #6200ff;
+}
+
+.highlight-fun {
+    color: #0099ff;
+}
+
+.highlight-boonka {
+    color: #f700ff;
+}
+
+.highlight-lizzanka {
+    color: #91ff00;
+}
+
+/* Problem Section */
+.project-part {
+    text-align: center;
+    padding: 0px ;
+    max-width: 950px;
+    margin: auto;
+}
+
+.project-part h3 {
+    font-weight: 700;
+    text-align: left;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    
+}
+
+.project-part .h2-center {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.project-part .h2-left {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.project-part .p-center {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.project-part .p-left  {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.5;
+    max-width: 500px;
+    margin: 0 ;
+    margin-bottom: 80px;
+    margin-top: 30px;
+}
+
+.custom-divider {
+    justify-content: center ;
+    display: flex;
+    border-top: 1px solid #666; /* Defines the thickness and color of the divider */
+    max-width: 950px;        /* Full width of the container */
+    margin: 100px auto;            /* Adds spacing above and below the divider */
+}
+
+.dynamic-content-container {
+    max-width: 950px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.dynamic-content-container > div {
+    flex: 0 0 300px; /* Fixed width of 300px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px; /* Ensures content stays below 300px */
+}
+
+.dynamic-content-container div img {
+    width: 100%; /* Ensures the image takes up full width of the container */
+    height: auto; /* Keeps the image aspect ratio */
+    max-width: 900px; /* Locks the image width to 300px */
+}
+/*
+/* Speech container adjustments */
+.speech-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; /* Stays within the 300px parent width */
+    gap: 10px; /* Adds spacing between each speech bubble */
+    padding-right: 30px; /* Add padding to the right */
+}
+
+/*
+.speech {
+    font-size: 1.2em;
+    color: #fff;
+    background: #7e4824;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: calc(100% - 30px);
+    position: relative;
+    height: auto;
+    margin: 10px 0; 
+}
+
+.speech::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.speech.left::after {
+    border-width: 15px 15px 15px 0;
+    border-color: transparent #7e4824 transparent transparent;
+    left: -15px;
+    top: calc(50% - 15px); 
+}
+ */
