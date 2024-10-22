@@ -250,7 +250,7 @@ section {
 .sections-container {
 	display: flex;
 	justify-content: center;
-	width: 90vw;
+	width: 100vw;
 	margin: auto;
 }
 
@@ -274,10 +274,10 @@ section {
 
  .grid-column {
 	display: flex;
-	flex: 1 1 calc(50% - 10px);
+	flex: 1 1 calc(40% - 10px);
 	flex-direction: column;
-	min-width: 350px;
-    max-width: 600px;
+	min-width: 400px;
+    max-width: 550px;
 	gap:20px;
  }
 
@@ -296,6 +296,8 @@ section {
     height: auto;
     display: block;
     object-fit: cover;
+	opacity: 0;
+	transition: opacity 4s;
 }
 
 .grid-item .hoverimg {
@@ -367,6 +369,8 @@ section {
 /* Container centered vertically and horizontally */
 #intro-container {
     display: flex;
+	min-width: 950px;
+	min-height: 600px;
     justify-content: left; /* Horizontally center the block */
     /* align-items: center; Vertically center the block */
 }

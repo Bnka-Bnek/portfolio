@@ -29,20 +29,21 @@ const projects = [
 ];
 
 // Function to create and append tiles to the grid
-function createTiles() {
+function createTiles(showImages) {
     const gridContainer = document.getElementById("grid-container"); 
 	const windowWidth = window.innerWidth;
 
 	gridContainer.innerHTML = "";
 
-	let columnWidth = Math.max(350, Math.min(600, windowWidth / 2)); // Minimum 400px, max 600px
-    let numberOfColumns = Math.max(2, Math.floor(windowWidth / columnWidth)); // At least 2 columns
+	let columnWidth = Math.max(300, Math.min(550, windowWidth / 2)); // Minimum 400px, max 600px
+    let numberOfColumns = Math.max(1, Math.floor(windowWidth / columnWidth)); // At least 2 columns
 
 	const columns = [];
 
     // Loop to create the columns dynamically
     for (let i = 0; i < numberOfColumns; i++) {
         const column = document.createElement("div");
+		column.id = "grid-column" + i;
         column.classList.add("grid-column");
         gridContainer.appendChild(column);
         columns.push(column);
@@ -55,9 +56,11 @@ function createTiles() {
         
         // Create image element
         const img = document.createElement("img"); 
+		img.id = "image-" + index;
         img.src = project.image; // Original image
         img.alt = project.title;
         img.loading = "lazy"; // Add lazy loading
+		img.style.opacity = showImages ? 1 : 0;
 
 		// Create hover image element
         const hoverImg = document.createElement("img");
@@ -97,8 +100,36 @@ function createTiles() {
     });
 }
 
+let imageIndex = 0;
+
+function imageFadeIn() {
+	const gridContainer = document.getElementById("grid-container"); 
+	const gridColumns = gridContainer.childNodes;	
+	let gridItems = [];
+
+	gridColumns.forEach(column => {
+		column.childNodes.forEach(item => {
+			gridItems.push(item);
+		});
+	})
+
+
+	if (imageIndex < gridItems.length) {
+		const image = document.getElementById("image-" + imageIndex);
+		image.style.opacity = 1;
+
+		imageIndex++
+
+		setTimeout(imageFadeIn, 500);
+	}
+}
+
 // Call the function to create tiles
-createTiles();
+createTiles(false);
 
+window.addEventListener('resize', createTiles(true));
 
-window.addEventListener('resize', createTiles);
+document.addEventListener("DOMContentLoaded", function() {
+    imageFadeIn();
+});
+
